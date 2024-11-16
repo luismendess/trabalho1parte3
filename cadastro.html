@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+  </head>
+
+  <body>
+    <header class="titulo">
+      <h1>Clínica ABC Health</h1>
+    </header>
+
+    <nav class="paginas">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+
+    <main class="principal-cadastro">
+      <form action="cadastroCliente.php" method="post">
+        <h2>Cadastro</h2>
+        <fieldset class="dados-pessoais">
+          <legend>Dados Pessoais</legend>
+            
+
+            <input type="hidden" name="id" value="12345">
+
+            <label id="nome"><b>Nome:</b></label>
+            <input type="text" name="nome" minlength="2" maxlength="50" autofocus required>
+
+            <label id="email"><b>Email:</b></label>
+            <input type="email" name="email" placeholder="exemplo@mail.com" required>
+            
+            <br>          
+            <br>
+
+            <label id="cpf"><b>CPF:</b></label>
+            <input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" placeholder="xxx.xxx.xxx-xx" required>
+
+            <label id="idade"><b>Idade:</b></label>
+            <input type="number" name="idade" required>
+            
+            <br>
+            <br>
+
+            <label id="telefone"><b>Telefone:</b></label>
+            <input type="tel" name="telefone" required>
+
+            <label id="nascimento"><b>Data de Nascimento:</b></label>
+            <input type="date" name="nascimento">
+            
+            <br>
+            <br>
+
+            <label id="sexo"><b>Sexo:</b></label>
+            <input type="radio" name="sexo" value="masculino" required>
+            <label id="masculino">Masculino</label>
+            <input type="radio" name="sexo" value="feminino" required>
+            <label id="feminino">Feminino</label>
+            <input type="radio" name="sexo" value="outro" required>
+            <label id="outro">Outro</label>
+
+            <br>
+            <br>
+
+            <label id="estado-civil"><b>Estado Civil:</b></label>
+            <select name="estado-civil">
+              <option value="">Selecione</option>
+              <option value="solteiro">Solteiro(a)</option>
+              <option value="casado">Casado(a)</option>
+              <option value="divorciado">Divorciado(a)</option>
+              <option value="viuvo">Viúvo(a)</option>
+            </select>
+            
+            <label id="codigoCliente"><b>Código de Cliente:</b></label>
+            <input type="text" name="codigoCliente" value="CL123456" readonly>
+
+            <br>
+            <br>
+          
+        </fieldset>
+
+        <fieldset class="Endereço">
+          <legend>Endereço</legend>
+          
+            <label id="cep"><b>CEP:</b></label>
+            <input type="text" pattern="\d{5}-\d{3}" name="cep" placeholder="12345-123" required>
+            
+            <label id="tipo-de-logradouro"><b>Tipo de Logradouro:</b></label>          
+            <select  name="tipo-de-logradouro" required>
+              <option value="">Selecione</option>
+              <option value="rua">Rua</option>
+              <option value="avenida">Avenida</option>
+              <option value="travessa">Travessa</option>
+              <option value="praca">Praça</option>
+              <option value="estrada">Estrada</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="logradouro"><b>Logradouro:</b></label>
+            <input type="text" id="logradouro" name="logradouro" required>
+
+            <label for="bairro"><b>Bairro:</b></label>
+            <input type="text" id="bairro" name="bairro" required>
+            
+            <br>
+            <br>
+
+            <label for="cidade"><b>Cidade:</b></label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <label for="estado"><b>Estado:</b></label>
+            <select id="estado" name="estado">
+              <option value="">Selecione</option>
+              <option value="ac">Acre</option>
+              <option value="al">Alagoas</option>
+              <option value="ap">Amapá</option>
+              <option value="am">Amazonas</option>
+              <option value="ba">Bahia</option>
+              <option value="ce">Ceará</option>
+              <option value="df">Distrito Federal</option>
+              <option value="es">Espírito Santo</option>
+              <option value="go">Goiás</option>
+              <option value="ma">Maranhão</option>
+              <option value="mt">Mato Grosso</option>
+              <option value="ms">Mato Grosso do Sul</option>
+              <option value="mg">Minas Gerais</option>
+              <option value="pa">Pará</option>
+              <option value="pb">Paraíba</option>
+              <option value="pr">Paraná</option>
+              <option value="pe">Pernambuco</option>
+              <option value="pi">Piauí</option>
+              <option value="rj">Rio de Janeiro</option>
+              <option value="rn">Rio Grande do Norte</option>
+              <option value="rs">Rio Grande do Sul</option>
+              <option value="ro">Rondônia</option>
+              <option value="rr">Roraima</option>
+              <option value="sc">Santa Catarina</option>
+              <option value="sp">São Paulo</option>
+              <option value="se">Sergipe</option>
+              <option value="to">Tocantins</option>
+            </select>
+
+            <br>
+            <br>
+           
+        </fieldset>
+      
+        <fieldset class="informacoes-adicionais">
+          <legend>Informações Adicionais</legend>
+            
+            <label id="interesses"><b>Interesses:</b></label><br>
+            <input type="checkbox" id="interesse1" name="interesses" value="filmes">
+            <label for="interesse1">Filmes</label>
+            <input type="checkbox" id="interesse2" name="interesses" value="informatica">
+            <label for="interesse2">Informática</label><br>
+            <input type="checkbox" id="interesse3" name="interesses" value="games">
+            <label for="interesse3">Games</label>
+            <input type="checkbox" id="interesse4" name="interesses" value="livros">
+            <label for="interesse4">Livros</label><br>
+            <input type="checkbox" id="interesse5" name="interesses" value="roupas">
+            <label for="interesse5">Roupas</label>
+            <input type="checkbox" id="interesse6" name="interesses" value="arte">
+            <label for="interesse6">Arte</label><br>
+            <input type="checkbox" id="interesse7" name="interesses" value="esportes">
+            <label for="interesse7">Esporte</label>
+            <input type="checkbox" id="interesse8" name="interesses" value="saude">
+            <label for="interesse8">Saúde</label>
+            
+            <br>
+            <br>
+
+            <label for="informacoes-complementares"><b>Informações Complementares:</b></label><br>
+            <textarea id="informacoes-complementares" name="informacoes-complementares" rows="4" cols="50"></textarea>
+            
+            <br>
+            <br>
+
+            <label for="imagem"><b>Anexar Imagem:</b></label><br>
+            <input type="file" id="imagem" name="imagem" accept="image/*">
+            <br>
+            <br>
+          
+        </fieldset>
+      </form>
+      <br>
+      
+      <button type="submit">Cadastrar</button>
+    </main>
+
+    <footer class="informacoes">
+      <h3>Informações para contato:</h3>
+      <div class="endereco">
+        <span>
+          <b>Endereço:</b> Rua Denhei Kanashiro, nº 9 - Apucarana, PR
+        </span>
+      </div>
+
+      <div class="contato">
+        <span>
+          <b>Telefone: </b>+55 (12) 12345-5678
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
